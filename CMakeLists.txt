@@ -3,4 +3,8 @@ project(Server)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Server main.cpp)
+include_directories(scr)
+
+add_subdirectory(scr)
+add_subdirectory(tst)
+add_subdirectory(lib/googletest)

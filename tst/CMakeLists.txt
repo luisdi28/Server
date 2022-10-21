@@ -1,11 +1,15 @@
-set (BINARY ${CMAKE_PROJECT_NAME}_tst)
+cmake_minimum_required(VERSION 3.23)
+project(Server)
 
-file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.h *.cpp)
+set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCES ${TEST_SOURCES})
+add_subdirectory(lib/googletest)
 
-add_executable(${BINARY} ${TEST_SOURCES})
+enable_testing()
 
-add_test(NAME ${BINARY} COMMAND ${BINARY})
+add_executable(servidor main.cpp)
 
-target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest)
+target_link_libraries(servidor
+        gtest
+        gtest_main
+        gmock_main)

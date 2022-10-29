@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/servidor.dir/main.cpp.o -o servidor  lib/libgtest.a lib/libgtest_main.a lib/libgmock_main.a lib/libgmock.a lib/libgtest.a 
